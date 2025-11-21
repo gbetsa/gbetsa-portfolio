@@ -1,0 +1,139 @@
+.cardWrapper {
+  position: sticky;
+  padding: 0 2rem;
+  margin-bottom: 2rem;
+  z-index: 10;
+}
+
+.card {
+  background: hsl(var(--card));
+  border: 2px solid hsl(var(--border));
+  border-radius: 1.5rem;
+  padding: 3rem;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 2rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: currentColor;
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, currentColor 0%, transparent 70%);
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+.card.react {
+  color: hsl(var(--tech-react));
+  border-color: hsl(var(--tech-react));
+}
+
+.card.node {
+  color: hsl(var(--tech-node));
+  border-color: hsl(var(--tech-node));
+}
+
+.card.postgres {
+  color: hsl(var(--tech-postgres));
+  border-color: hsl(var(--tech-postgres));
+}
+
+.card.docker {
+  color: hsl(var(--tech-docker));
+  border-color: hsl(var(--tech-docker));
+}
+
+.card.typescript {
+  color: hsl(var(--tech-typescript));
+  border-color: hsl(var(--tech-typescript));
+}
+
+.card.git {
+  color: hsl(var(--tech-git));
+  border-color: hsl(var(--tech-git));
+}
+
+.cardIcon {
+  width: 120px;
+  height: 120px;
+  background: rgba(0, 217, 192, 0.1);
+  border: 2px solid currentColor;
+  border-radius: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: currentColor;
+  position: relative;
+  z-index: 1;
+}
+
+.cardContent {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+}
+
+.cardTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  color: hsl(var(--foreground));
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.cardDescription {
+  font-size: 1.25rem;
+  color: hsl(var(--muted-foreground));
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  .cardWrapper {
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .card {
+    padding: 2rem 1.5rem;
+    min-height: 350px;
+  }
+
+  .cardIcon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .cardIcon svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .cardTitle {
+    font-size: 2rem;
+  }
+
+  .cardDescription {
+    font-size: 1rem;
+  }
+}
