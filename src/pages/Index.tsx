@@ -9,6 +9,7 @@ import Contact from "@/components/Contact";
 import MenuModal from "@/components/MenuModal";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import SmoothScroll from "@/components/SmoothScroll";
+import CustomCursor from "@/components/CustomCursor";
 import { useEffect } from "react";
 
 const Index = () => {
@@ -16,6 +17,7 @@ const Index = () => {
 
   return (
     <SmoothScroll>
+      <CustomCursor />
       <main className="font-['Inter'] ">
         <Hero />
         <Technologies />

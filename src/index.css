@@ -86,6 +86,20 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 
+  /* Hide native cursor for desktop */
+  @media (pointer: fine) {
+
+    html,
+    body,
+    a,
+    button,
+    input,
+    textarea,
+    [role="button"] {
+      cursor: none !important;
+    }
+  }
+
   /* Custom Scrollbar */
   ::-webkit-scrollbar {
     width: 10px;

@@ -42,11 +42,6 @@ const Hero = () => {
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    element?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <section id="hero" className="min-h-[100svh] flex items-center justify-center bg-gradient-hero relative overflow-hidden py-20">
       {/* Animated background grid */}
@@ -145,19 +140,23 @@ const Hero = () => {
           >
             <Button
               size="lg"
-              onClick={() => scrollToSection('contact')}
+              asChild
               className="group bg-gradient-accent text-primary-foreground hover:shadow-glow transition-all duration-300 px-8 py-6 text-base font-bold rounded-xl"
             >
-              <Mail className="mr-2 h-5 w-5 group-hover:rotate-12 transition-transform" />
-              Vamos conversar?
+              <a href="#contact">
+                <Mail className="mr-2 h-5 w-5 group-hover:rotate-12 transition-transform" />
+                Vamos conversar?
+              </a>
             </Button>
             <Button
               size="lg"
               variant="secondary"
-              onClick={() => scrollToSection('projects')}
+              asChild
               className="hover:bg-secondary/80 transition-all px-8 py-6 text-base font-semibold rounded-xl backdrop-blur-md bg-secondary/50 border border-border"
             >
-              Ver Projetos
+              <a href="#projects">
+                Ver Projetos
+              </a>
             </Button>
           </motion.div>
 
@@ -188,19 +187,21 @@ const Hero = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <motion.div
-        style={{ opacity }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
-      >
-        <span className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground/60 font-bold">Scroll</span>
-        <div className="w-[20px] h-[35px] rounded-full border-2 border-primary/20 flex justify-center p-1.5 backdrop-blur-sm">
-          <motion.div
-            animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-            className="w-1 h-1 rounded-full bg-primary"
-          />
-        </div>
-      </motion.div>
+      <a href="#tech">
+        <motion.div
+          style={{ opacity }}
+          className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 group cursor-pointer"
+        >
+          <span className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground/60 font-bold group-hover:text-primary transition-colors">Scroll</span>
+          <div className="w-[20px] h-[35px] rounded-full border-2 border-primary/20 flex justify-center p-1.5 backdrop-blur-sm group-hover:border-primary/40 transition-colors">
+            <motion.div
+              animate={{ y: [0, 8, 0] }}
+              transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+              className="w-1 h-1 rounded-full bg-primary"
+            />
+          </div>
+        </motion.div>
+      </a>
     </section>
   );
 };
