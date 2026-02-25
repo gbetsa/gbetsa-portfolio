@@ -69,12 +69,12 @@ const Technologies = () => {
             Stacks
           </span>
         </div>
-        <h2 className="text-5xl md:text-6xl font-bold mb-6">
+        <h2 className="text-3xl md:text-4xl font-bold mb-4">
           <span className="bg-gradient-accent bg-clip-text text-transparent">
             Tecnologias & Expertise
           </span>
         </h2>
-        <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+        <p className="text-base text-muted-foreground max-w-2xl mx-auto">
           Ferramentas e tecnologias que domino para criar soluções completas e
           escaláveis
         </p>

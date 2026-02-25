@@ -1,13 +1,13 @@
 .section {
-  min-height: 400vh;
-  padding: 6rem 0 4rem;
+  min-height: 250vh;
+  padding: 4rem 0 3rem;
   position: relative;
   background: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(210 30% 6%) 100%);
 }
 
 .header {
   text-align: center;
-  margin-bottom: 6rem;
+  margin-bottom: 4rem;
   padding: 0 2rem;
 }
 
@@ -43,7 +43,7 @@
 
 .cardsContainer {
   position: relative;
-  margin-bottom: 8rem;
+  margin-bottom: 6rem;
 }
 
 .statsWrapper {
@@ -57,7 +57,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 3rem;
-  padding: 4rem;
+  padding: 3rem;
   background: hsl(var(--card));
   border: 2px solid hsl(var(--primary));
   border-radius: 2rem;
@@ -69,7 +69,7 @@
 }
 
 .statValue {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   font-weight: 700;
   color: hsl(var(--primary));
   margin-bottom: 0.5rem;
@@ -90,34 +90,34 @@
   .section {
     min-height: 350vh;
   }
-  
+
   .header {
     margin-bottom: 4rem;
-    padding: 0 1rem;
+    padding: 0 1.25rem;
   }
-  
+
   .title {
     font-size: 2rem;
   }
-  
+
   .description {
     font-size: 1rem;
   }
-  
+
   .statsWrapper {
-    padding: 0 1rem;
+    padding: 0 1.25rem;
   }
-  
+
   .stats {
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    padding: 2rem;
+    gap: 1.5rem;
+    padding: 1.5rem 1rem;
   }
-  
+
   .statValue {
     font-size: 2.5rem;
   }
-  
+
   .statLabel {
     font-size: 0.875rem;
   }

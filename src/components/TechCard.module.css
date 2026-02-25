@@ -9,8 +9,8 @@
   background: hsl(var(--card));
   border: 2px solid hsl(var(--border));
   border-radius: 1.5rem;
-  padding: 3rem;
-  min-height: 500px;
+  padding: 2rem;
+  min-height: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -75,8 +75,8 @@
 }
 
 .cardIcon {
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
   background: rgba(0, 217, 192, 0.1);
   border: 2px solid currentColor;
   border-radius: 1.5rem;
@@ -95,22 +95,22 @@
 }
 
 .cardTitle {
-  font-size: 3rem;
+  font-size: 2.25rem;
   font-weight: 700;
   color: hsl(var(--foreground));
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   letter-spacing: -0.02em;
 }
 
 .cardDescription {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   color: hsl(var(--muted-foreground));
-  line-height: 1.8;
+  line-height: 1.6;
 }
 
 @media (max-width: 768px) {
   .cardWrapper {
-    padding: 0 1rem;
+    padding: 0 1.25rem;
     margin-bottom: 1rem;
   }
 

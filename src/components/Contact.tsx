@@ -70,31 +70,31 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="py-20 bg-background relative block md:flex md:items-center md:min-h-screen"
+      className="py-20 bg-gradient-hero relative block md:flex md:items-center md:min-h-screen"
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(59,130,246,0.05),transparent_50%)]" />
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-tech-green/5 rounded-full blur-3xl" />
 
-      <div className="container mx-auto max-w-6xl relative z-10 flex flex-col px-4">
-        <div className="text-center mb-16 md:mb-20">
+      <div className="container mx-auto max-w-6xl relative z-10 flex flex-col">
+        <div className="text-center mb-10 md:mb-14">
           <div className="inline-block mb-4">
             <span className="px-4 py-2 bg-secondary/50 backdrop-blur-sm rounded-full text-sm font-medium text-primary border border-primary/20">
               Contato
             </span>
           </div>
-          <h2 className="text-4xl md:text-6xl font-bold mb-4 md:mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
             <span className="bg-gradient-accent bg-clip-text text-transparent">
               Vamos Trabalhar Juntos
             </span>
           </h2>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base text-muted-foreground max-w-2xl mx-auto">
             Tem um projeto em mente? Estou disponível para novas oportunidades
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8 w-full max-w-full">
           <div className="md:col-span-3 flex flex-col w-full">
-            <Card className="p-6 md:p-10 bg-gradient-card backdrop-blur-sm border-border hover:border-primary/50 transition-all duration-300 shadow-card flex flex-col w-full">
+            <Card className="p-4 md:p-6 bg-gradient-card backdrop-blur-sm border-border hover:border-primary/50 transition-all duration-300 shadow-card flex flex-col w-full">
               <form
                 onSubmit={handleSubmit}
                 className="flex flex-col space-y-6 w-full"
@@ -112,9 +112,8 @@ const Contact = () => {
                       placeholder="Digite seu nome completo"
                       value={name}
                       onChange={(e) => setName(e.target.value)}
-                      className={`${inputClass} ${
-                        errors.name ? inputErrorClass : ""
-                      }`}
+                      className={`${inputClass} ${errors.name ? inputErrorClass : ""
+                        }`}
                     />
                     {errors.name && (
                       <p className="text-red-500 text-sm">{errors.name}</p>
@@ -133,9 +132,8 @@ const Contact = () => {
                       placeholder="Digite seu email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className={`${inputClass} ${
-                        errors.email ? inputErrorClass : ""
-                      }`}
+                      className={`${inputClass} ${errors.email ? inputErrorClass : ""
+                        }`}
                     />
                     {errors.email && (
                       <p className="text-red-500 text-sm">{errors.email}</p>
@@ -155,9 +153,8 @@ const Contact = () => {
                     placeholder="Sobre o que você quer falar?"
                     value={subject}
                     onChange={(e) => setSubject(e.target.value)}
-                    className={`${inputClass} ${
-                      errors.subject ? inputErrorClass : ""
-                    }`}
+                    className={`${inputClass} ${errors.subject ? inputErrorClass : ""
+                      }`}
                   />
                   {errors.subject && (
                     <p className="text-red-500 text-sm">{errors.subject}</p>
@@ -177,9 +174,8 @@ const Contact = () => {
                     rows={6}
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
-                    className={`${inputClass} resize-none min-h-[150px] md:min-h-[300px] ${
-                      errors.message ? inputErrorClass : ""
-                    }`}
+                    className={`${inputClass} resize-none min-h-[150px] md:min-h-[300px] ${errors.message ? inputErrorClass : ""
+                      }`}
                   />
                   {errors.message && (
                     <p className="text-red-500 text-sm">{errors.message}</p>

@@ -12,7 +12,7 @@ const Hero = () => {
     <section id="hero" className="min-h-screen flex items-center justify-center bg-gradient-hero relative overflow-hidden">
       {/* Animated background grid */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:4rem_4rem]" />
-      
+
       {/* Glow orbs */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-tech-cyan/20 rounded-full blur-3xl animate-glow-pulse" />
@@ -20,16 +20,16 @@ const Hero = () => {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-tech-green/10 rounded-full blur-3xl animate-glow-pulse" style={{ animationDelay: "2s" }} />
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto relative z-10">
         <div className="max-w-5xl mx-auto text-center">
           {/* Profile Image with Floating Animation */}
           <div className="mb-8 flex justify-center animate-fade-in">
             <div className="relative group">
               <div className="absolute inset-0 bg-gradient-accent rounded-full blur-xl opacity-50 group-hover:opacity-75 transition-opacity animate-glow-pulse" />
-              <img 
-                src={profileImage} 
-                alt="Guilherme Betsa" 
-                className="relative w-40 h-40 rounded-full border-4 border-primary/30 shadow-glow object-cover transform group-hover:scale-105 transition-transform duration-500"
+              <img
+                src={profileImage}
+                alt="Guilherme Betsa"
+                className="relative w-32 h-32 rounded-full border-4 border-primary/30 shadow-glow object-cover transform group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute -bottom-0 -right-0 w-10 h-10 bg-tech-green rounded-full border-4 border-background flex items-center justify-center">
                 <div className="w-3 h-3 bg-tech-green rounded-full animate-pulse" />
@@ -47,17 +47,17 @@ const Hero = () => {
               Fullstack Developer
             </span>
           </div>
-          
+
           {/* Main Heading */}
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            <span className="text-foreground block mb-2">Olá, sou</span>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 animate-fade-in" style={{ animationDelay: "0.2s" }}>
+            <span className="text-foreground block mb-1">Olá, sou</span>
             <span className="bg-gradient-accent bg-clip-text text-transparent block">
               Guilherme Betsa
             </span>
           </h1>
-          
+
           {/* Description */}
-          <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed animate-fade-in" style={{ animationDelay: "0.3s" }}>
+          <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed animate-fade-in" style={{ animationDelay: "0.3s" }}>
             Desenvolvedor fullstack especializado em <span className="text-primary font-semibold">React.js</span>, <span className="text-primary font-semibold">Node.js</span>, <span className="text-primary font-semibold">PostgreSQL</span> e <span className="text-primary font-semibold">Docker</span>.
             <br />
             Transformando ideias em aplicações escaláveis e robustas.
@@ -65,19 +65,19 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16 animate-fade-in" style={{ animationDelay: "0.4s" }}>
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               onClick={() => scrollToSection('contact')}
-              className="group bg-gradient-accent text-primary-foreground hover:shadow-glow transition-all duration-300 px-8 py-6 text-lg font-semibold"
+              className="group bg-gradient-accent text-primary-foreground hover:shadow-glow transition-all duration-300 px-6 py-5 text-base font-semibold"
             >
               <Mail className="mr-2 h-5 w-5 group-hover:rotate-12 transition-transform" />
               Entre em Contato
             </Button>
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               variant="secondary"
               onClick={() => scrollToSection('projects')}
-              className="hover:bg-secondary/80 transition-all px-8 py-6 text-lg backdrop-blur-sm bg-secondary/50 border border-border"
+              className="hover:bg-secondary/80 transition-all px-6 py-5 text-base backdrop-blur-sm bg-secondary/50 border border-border"
             >
               Ver Projetos
             </Button>
@@ -85,23 +85,23 @@ const Hero = () => {
 
           {/* Social Links */}
           <div className="flex gap-6 justify-center animate-fade-in" style={{ animationDelay: "0.5s" }}>
-            <a 
-              href="https://github.com/gbetsa" 
-              target="_blank" 
+            <a
+              href="https://github.com/gbetsa"
+              target="_blank"
               rel="noopener noreferrer"
               className="group p-3 rounded-full bg-secondary/50 backdrop-blur-sm border border-border hover:border-primary/50 text-muted-foreground hover:text-primary transition-all hover:shadow-glow"
             >
               <Github className="h-6 w-6 group-hover:scale-110 transition-transform" />
             </a>
-            <a 
-              href="https://www.linkedin.com/in/gbetsa/" 
-              target="_blank" 
+            <a
+              href="https://www.linkedin.com/in/gbetsa/"
+              target="_blank"
               rel="noopener noreferrer"
               className="group p-3 rounded-full bg-secondary/50 backdrop-blur-sm border border-border hover:border-primary/50 text-muted-foreground hover:text-primary transition-all hover:shadow-glow"
             >
               <Linkedin className="h-6 w-6 group-hover:scale-110 transition-transform" />
             </a>
-            <a 
+            <a
               href="mailto:gbetsacomercial@gmail.com"
               className="group p-3 rounded-full bg-secondary/50 backdrop-blur-sm border border-border hover:border-primary/50 text-muted-foreground hover:text-primary transition-all hover:shadow-glow"
             >

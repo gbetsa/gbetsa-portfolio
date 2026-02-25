@@ -63,6 +63,20 @@ const MenuLateralModal = () => {
               Stacks
             </a>
             <a
+              href="#experience"
+              onClick={() => setOpen(false)}
+              className="text-base font-medium text-white hover:text-primary/80 transition-colors"
+            >
+              Experiência
+            </a>
+            <a
+              href="#education"
+              onClick={() => setOpen(false)}
+              className="text-base font-medium text-white hover:text-primary/80 transition-colors"
+            >
+              Formação
+            </a>
+            <a
               href="#projects"
               onClick={() => setOpen(false)}
               className="text-base font-medium text-white hover:text-primary/80 transition-colors"
