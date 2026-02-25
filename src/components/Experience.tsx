@@ -16,16 +16,17 @@ interface Experience {
 
 const experiences: Experience[] = [
     {
-        role: "Desenvolvedor Web Full Stack",
-        company: "Autônomo",
+        role: "Empreendedor - Software House | Desenvolvedor Full Stack",
+        company: "Software House Própria",
         period: "Jan de 2024 - O momento",
         location: "Florianópolis, SC · Remoto",
-        description: "Desenvolvedor Full Stack especializado na criação de soluções completas e personalizadas. Atuação em projetos diversos, desde aplicações web e mobile até integração de sistemas e gerenciamento de banco de dados.",
+        description: "Responsável pela criação, gestão e operação de uma software house, prestando serviços de desenvolvimento sob medida para clientes de diversos segmentos.",
         achievements: [
-            "Desenvolvimento de aplicações robustas com React e React Native.",
-            "Construção de APIs escaláveis utilizando Node.js e PostgreSQL.",
-            "Conteinerização de ambientes de desenvolvimento com Docker.",
-            "Foco em entrega de alta qualidade e eficiência para necessidades específicas."
+            "Prospecção e gestão de relacionamento com clientes, levantamento de requisitos e definição de escopo.",
+            "Planejamento, desenvolvimento e entrega de soluções digitais ponta a ponta.",
+            "Organização de processos internos, controle de demandas e garantia de qualidade nas entregas.",
+            "Desenvolvimento técnico fullstack (Frontend, Backend e Banco de Dados) de soluções robustas.",
+            "Tomada de decisões estratégicas e resolução de problemas técnicos e de negócio."
         ],
         tech: ["React", "React Native", "Node.js", "PostgreSQL", "Docker", "TypeScript"],
         icon: Code2,

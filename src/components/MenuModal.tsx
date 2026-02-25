@@ -63,6 +63,13 @@ const MenuLateralModal = () => {
               Stacks
             </a>
             <a
+              href="#soft-skills"
+              onClick={() => setOpen(false)}
+              className="text-base font-medium text-white hover:text-primary/80 transition-colors"
+            >
+              Habilidades
+            </a>
+            <a
               href="#experience"
               onClick={() => setOpen(false)}
               className="text-base font-medium text-white hover:text-primary/80 transition-colors"
@@ -82,6 +89,13 @@ const MenuLateralModal = () => {
               className="text-base font-medium text-white hover:text-primary/80 transition-colors"
             >
               Projetos
+            </a>
+            <a
+              href="#news"
+              onClick={() => setOpen(false)}
+              className="text-base font-medium text-white hover:text-primary/80 transition-colors"
+            >
+              Novidades
             </a>
             <a
               href="#contact"
