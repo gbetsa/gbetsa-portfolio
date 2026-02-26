@@ -19,7 +19,7 @@ const projects = [
     title: "Market3D | E-commerce",
     description:
       "Plataforma de e-commerce para produtos 3D, com gestão completa de pedidos, painel administrativo e pagamentos integrados.",
-    tech: ["React", "TypeScript", "Node.js", "Express", "Sequelize", "PostgreSQL", "Tailwind CSS", "Socket.IO", "VPS", "Docker", "Firebase", "Redux", "Asaas"],
+    tech: ["React", "TypeScript", "Node.js", "Express", "Sequelize", "PostgreSQL", "Tailwind CSS", "Socket.IO", "VPS", "Docker", "Firebase", "Redis", "Asaas"],
     image: Market3DImg,
   },
   {
