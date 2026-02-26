@@ -5,14 +5,14 @@ import useEmblaCarousel from "embla-carousel-react";
 import { useCallback, useEffect, useState } from "react";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 
-import GnconnectionSystemImg from "../assets/gnconnectionsystem.png";
-import Market3DImg from "../assets/market3d.png";
-import AureliusImg from "../assets/aurelius.png";
-import TreineMaisImg from "../assets/treinemais.png";
-import ApolluzImg from "../assets/apolluz.png";
-import NanaImg from "../assets/nana.png";
-import SoChavesImg from "../assets/sochaves.png";
-import BarBuddyImg from "../assets/barbuddy.png";
+import GnconnectionSystemImg from "../assets/gnconnectionsystem.webp";
+import Market3DImg from "../assets/market3d.webp";
+import AureliusImg from "../assets/aurelius.webp";
+import TreineMaisImg from "../assets/treinemais.webp";
+import ApolluzImg from "../assets/apolluz.webp";
+import NanaImg from "../assets/nana.webp";
+import SoChavesImg from "../assets/sochaves.webp";
+import BarBuddyImg from "../assets/barbuddy.webp";
 
 const projects = [
   {
