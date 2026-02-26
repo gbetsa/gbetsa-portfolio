@@ -10,13 +10,29 @@ import MenuModal from "@/components/MenuModal";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import SmoothScroll from "@/components/SmoothScroll";
 import CustomCursor from "@/components/CustomCursor";
-import { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 
 const Index = () => {
-
-
   return (
     <SmoothScroll>
+      <Helmet>
+        <title>Guilherme Betsa | Fullstack Developer Portfolio</title>
+        <meta name="description" content="Guilherme Betsa - Desenvolvedor Fullstack especialista em React, Node.js e tecnologias modernas. Confira meus projetos e entre em contato." />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://gbetsa.vercel.app/" />
+        <meta property="og:title" content="Guilherme Betsa | Fullstack Developer Portfolio" />
+        <meta property="og:description" content="Especialista em criar soluções Fullstack robustas com React, Node e as melhores tecnologias do mercado." />
+        <meta property="og:image" content="https://gbetsa.vercel.app/og-image.png" />
+
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://gbetsa.vercel.app/" />
+        <meta property="twitter:title" content="Guilherme Betsa | Fullstack Developer Portfolio" />
+        <meta property="twitter:description" content="Especialista em criar soluções Fullstack robustas com React, Node e as melhores tecnologias do mercado." />
+        <meta property="twitter:image" content="https://gbetsa.vercel.app/og-image.png" />
+      </Helmet>
       <CustomCursor />
       <main className="font-['Inter'] ">
         <Hero />
