@@ -19,6 +19,33 @@ const Index = () => {
         <title>Guilherme Betsa | Fullstack Developer Portfolio</title>
         <meta name="description" content="Guilherme Betsa - Desenvolvedor Fullstack especialista em React, Node.js e tecnologias modernas. Confira meus projetos e entre em contato." />
 
+        {/* Structured Data (JSON-LD) */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "Person",
+                "name": "Guilherme Betsa",
+                "jobTitle": "Fullstack Developer",
+                "url": "https://gbetsa.vercel.app/",
+                "image": "https://gbetsa.vercel.app/profile.jpeg",
+                "sameAs": [
+                  "https://github.com/gbetsa",
+                  "https://www.linkedin.com/in/gbetsa/"
+                ],
+                "description": "Desenvolvedor Fullstack especialista em React, Node.js e tecnologias modernas."
+              },
+              {
+                "@type": "WebSite",
+                "name": "Guilherme Betsa | Portfólio",
+                "url": "https://gbetsa.vercel.app/",
+                "description": "Portfólio de Guilherme Betsa, Desenvolvedor Fullstack especialista em React, Node.js e tecnologias modernas."
+              }
+            ]
+          })}
+        </script>
+
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://gbetsa.vercel.app/" />
@@ -37,10 +64,10 @@ const Index = () => {
       <main className="font-['Inter'] ">
         <Hero />
         <Technologies />
-        <SoftSkills />
+        <Projects />
         <Experience />
         <Education />
-        <Projects />
+        <SoftSkills />
         <News />
         <Contact />
         <MenuModal />
@@ -69,10 +96,10 @@ const Index = () => {
                   Stacks
                 </a>
                 <a
-                  href="#soft-skills"
+                  href="#projects"
                   className="text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Habilidades
+                  Projetos
                 </a>
                 <a
                   href="#experience"
@@ -87,10 +114,10 @@ const Index = () => {
                   Formação
                 </a>
                 <a
-                  href="#projects"
+                  href="#soft-skills"
                   className="text-sm text-muted-foreground hover:text-primary transition-colors"
                 >
-                  Projetos
+                  Habilidades
                 </a>
                 <a
                   href="#news"

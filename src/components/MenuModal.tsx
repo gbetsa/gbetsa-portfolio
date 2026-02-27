@@ -27,10 +27,10 @@ const MenuLateralModal = () => {
   const menuItems = [
     { label: "Início", href: "#hero" },
     { label: "Stacks", href: "#tech" },
-    { label: "Habilidades", href: "#soft-skills" },
+    { label: "Projetos", href: "#projects" },
     { label: "Experiência", href: "#experience" },
     { label: "Formação", href: "#education" },
-    { label: "Projetos", href: "#projects" },
+    { label: "Habilidades", href: "#soft-skills" },
     { label: "Novidades", href: "#news" },
     { label: "Contato", href: "#contact" },
   ];
