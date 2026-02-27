@@ -22,6 +22,7 @@ interface Certificate {
     credentialId?: string;
     credentialUrl?: string;
     pdfUrl?: string;
+    imageUrl?: string;
     issuerIcon?: string;
 }
 
@@ -51,6 +52,7 @@ const certificates: Certificate[] = [
         date: "Ago de 2025",
         description: "Participação no maior evento de startups e inovação do Sul do Brasil, com foco em empreendedorismo digital e tendências de tecnologia.",
         pdfUrl: "/certificates/startup-summit-2025.pdf",
+        imageUrl: "/certificates/startup-summit.png",
     },
     {
         title: "Desenvolvedor Web Full Stack",
@@ -59,6 +61,7 @@ const certificates: Certificate[] = [
         description: "Certificado de conclusão do Módulo 03 - Full-Stack do FuturoDev pelo Floripa Mais Tec. Aprimorei habilidades em React.js, Node.js, Express, Sequelize, PostgreSQL, Git, GitHub e Docker. Com mais de 200 horas de prática, incluindo um projeto em squad, também adquiri experiência em metodologias ágeis como SCRUM e no uso do Trello para gestão de projetos.",
         skills: ["React.js", "Node.js", "Express", "PostgreSQL", "Docker", "SCRUM"],
         pdfUrl: "/certificates/fullstack-senai.pdf",
+        imageUrl: "/certificates/fullstack-senai.png",
     },
     {
         title: "Desenvolvedor Web Back End",
@@ -67,6 +70,7 @@ const certificates: Certificate[] = [
         description: "Certificado de conclusão do Módulo 02 - Back-End do FuturoDev pelo Floripa Mais Tec. Aprimorei habilidades em JavaScript, Node.js, Express, PostgreSQL, Trello e GitHub. Realizei mais de 50 exercícios e projetos práticos ao longo de 200 horas, consolidando meu aprendizado e avançando na jornada como desenvolvedor full-stack.",
         skills: ["JavaScript", "Node.js", "Express", "PostgreSQL", "GitHub"],
         pdfUrl: "/certificates/backend-senai.pdf",
+        imageUrl: "/certificates/backend-senai.png",
     },
     {
         title: "Desenvolvedor Web Front End",
@@ -75,6 +79,7 @@ const certificates: Certificate[] = [
         description: "Certificado de conclusão do Módulo 01 - Front-End do FuturoDev pelo Floripa Mais Tec. Durante o curso, aprendi React.js, Trello e Git, participei de projetos práticos e eventos que impulsionaram meu aprendizado e networking, além de desenvolver soft skills para o crescimento pessoal e profissional.",
         skills: ["React.js", "HTML5", "CSS", "Git", "Trello"],
         pdfUrl: "/certificates/frontend-senai.pdf",
+        imageUrl: "/certificates/frontend-senai.png",
     },
     {
         title: "NLW Unite – Node.js",
@@ -254,32 +259,33 @@ const Education = () => {
                                     </div>
                                 </div>
 
-                                {/* PDF Preview */}
-                                {cert.pdfUrl && (
+                                {cert.imageUrl && (
                                     <a
-                                        href={cert.pdfUrl}
+                                        href={cert.pdfUrl || cert.credentialUrl}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="block mb-4 rounded-lg border border-border hover:border-primary/40 transition-colors duration-300 relative group/preview"
-                                        title="Clique para abrir o PDF completo"
+                                        title="Clique para abrir o certificado completo"
                                         style={{ height: '200px', overflow: 'hidden' }}
                                     >
-                                        <iframe
-                                            src={`${cert.pdfUrl}#toolbar=0&navpanes=0&scrollbar=0&view=FitH&zoom=90`}
-                                            scrolling="no"
-                                            style={{
-                                                width: '100%',
-                                                height: '230px',
-                                                border: 'none',
-                                                pointerEvents: 'none',
-                                                display: 'block',
-                                            }}
-                                            title={`Preview - ${cert.title}`}
+                                        <img
+                                            src={cert.imageUrl}
+                                            alt={cert.title}
+                                            className="w-full h-full object-cover object-top transition-transform duration-500 group-hover/preview:scale-105"
                                         />
                                         <div className="absolute inset-0 bg-black/0 group-hover/preview:bg-black/40 transition-all duration-300 flex items-center justify-center rounded-lg">
                                             <span className="opacity-0 group-hover/preview:opacity-100 transition-opacity duration-300 text-white text-xs font-semibold bg-black/60 px-3 py-1.5 rounded-full backdrop-blur-sm flex items-center gap-1.5">
-                                                <FileText className="w-3.5 h-3.5" />
-                                                Abrir PDF
+                                                {cert.pdfUrl ? (
+                                                    <>
+                                                        <FileText className="w-3.5 h-3.5" />
+                                                        Abrir PDF
+                                                    </>
+                                                ) : (
+                                                    <>
+                                                        <ExternalLink className="w-3.5 h-3.5" />
+                                                        Ver Online
+                                                    </>
+                                                )}
                                             </span>
                                         </div>
                                     </a>
