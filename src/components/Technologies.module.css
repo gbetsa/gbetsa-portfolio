@@ -48,42 +48,75 @@
 
 .statsWrapper {
   padding: 0 2rem;
+  margin-top: 4rem;
   margin-bottom: 4rem;
 }
 
 .stats {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 3rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
   padding: 3rem;
-  background: hsl(var(--card));
-  border: 2px solid hsl(var(--primary));
+  background: rgba(30, 41, 59, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 217, 192, 0.2);
   border-radius: 2rem;
-  box-shadow: 0 20px 60px rgba(0, 217, 192, 0.2);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.stats::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0, 217, 192, 0.5), transparent);
 }
 
 .statItem {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  transition: transform 0.3s ease;
+}
+
+.statItem:hover {
+  transform: translateY(-5px);
+}
+
+.statIcon {
+  color: hsl(var(--primary));
+  margin-bottom: 0.5rem;
+  opacity: 0.8;
 }
 
 .statValue {
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-size: 3rem;
+  font-weight: 800;
   color: hsl(var(--primary));
-  margin-bottom: 0.5rem;
-  background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(174 100% 52%) 100%);
+  margin-bottom: 0.25rem;
+  background: linear-gradient(135deg, hsl(var(--primary)) 0%, #ffffff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   line-height: 1;
+  letter-spacing: -0.02em;
 }
 
 .statLabel {
-  font-size: 1rem;
+  font-size: 0.9375rem;
   color: hsl(var(--muted-foreground));
   font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 @media (max-width: 768px) {
@@ -109,16 +142,16 @@
   }
 
   .stats {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-    padding: 1.5rem 1rem;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    padding: 2.5rem 1.5rem;
   }
 
   .statValue {
-    font-size: 2.5rem;
+    font-size: 2.75rem;
   }
 
   .statLabel {
-    font-size: 0.875rem;
+    font-size: 0.8125rem;
   }
 }

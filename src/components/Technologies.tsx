@@ -5,8 +5,13 @@ import {
   Container,
   FileCode,
   GitBranch,
+  Clock,
+  Users,
+  Zap,
 } from "lucide-react";
+import { motion } from "framer-motion";
 import TechCard from "./TechCard";
+import Counter from "./ui/Counter";
 import styles from "./Technologies.module.css";
 
 const technologies = [
@@ -55,9 +60,9 @@ const technologies = [
 ];
 
 const stats = [
-  { value: "4+", label: "Anos de Experiência" },
-  { value: "20+", label: "Clientes Atendidos" },
-  { value: "100%", label: "Taxa de Sucesso" },
+  { value: "4+", label: "Anos de Experiência", icon: Clock },
+  { value: "20+", label: "Clientes Atendidos", icon: Users },
+  { value: "15+", label: "Tecnologias no Stack", icon: Zap },
 ];
 
 const Technologies = () => {
@@ -94,17 +99,36 @@ const Technologies = () => {
       </div>
 
       <div className={styles.statsWrapper}>
-        <div className={styles.stats}>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className={styles.stats}
+        >
           {stats.map((stat, index) => (
-            <div key={index} className={styles.statItem}>
-              <div className={styles.statValue}>{stat.value}</div>
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className={styles.statItem}
+            >
+              <div className={styles.statIcon}>
+                <stat.icon size={28} />
+              </div>
+              <div className={styles.statValue}>
+                <Counter value={stat.value} />
+              </div>
               <div className={styles.statLabel}>{stat.label}</div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
 };
 
 export default Technologies;
+
