@@ -8,6 +8,7 @@ import {
   Clock,
   Users,
   Zap,
+  Layers,
 } from "lucide-react";
 import { motion } from "framer-motion";
 import TechCard from "./TechCard";
@@ -23,11 +24,39 @@ const technologies = [
     color: "react",
   },
   {
+    name: "Next.js",
+    description:
+      "Framework React para produção com renderização server-side (SSR), rotas dinâmicas e otimização automática de performance.",
+    icon: Layers,
+    color: "next",
+  },
+  {
+    name: "TypeScript",
+    description:
+      "Desenvolvimento de aplicações type-safe com TypeScript, garantindo código limpo, previsível e fácil de manter.",
+    icon: FileCode,
+    color: "typescript",
+  },
+  {
     name: "Node.js",
     description:
       "Desenvolvimento de APIs RESTful e aplicações backend eficientes com Node.js e Express, garantindo performance e escalabilidade.",
     icon: Server,
     color: "node",
+  },
+  {
+    name: "Sequelize ORM",
+    description:
+      "ORM para Node.js com suporte a migrations, seeders e relacionamentos complexos, facilitando a interação com bancos relacionais.",
+    icon: Database,
+    color: "sequelize",
+  },
+  {
+    name: "Prisma ORM",
+    description:
+      "ORM moderno com tipagem automática, query builder intuitivo e migrations gerenciadas, acelerando o desenvolvimento backend.",
+    icon: Database,
+    color: "prisma",
   },
   {
     name: "PostgreSQL",
@@ -42,13 +71,6 @@ const technologies = [
       "Containerização de aplicações com Docker e configuração de servidores web com Nginx, garantindo deploy ágil e consistente.",
     icon: Container,
     color: "docker",
-  },
-  {
-    name: "TypeScript",
-    description:
-      "Desenvolvimento de aplicações type-safe com TypeScript, garantindo código limpo, previsível e fácil de manter.",
-    icon: FileCode,
-    color: "typescript",
   },
   {
     name: "Git & CI/CD",

@@ -74,6 +74,21 @@
   border-color: hsl(var(--tech-git));
 }
 
+.card.next {
+  color: hsl(var(--tech-next));
+  border-color: hsl(var(--tech-next));
+}
+
+.card.sequelize {
+  color: hsl(var(--tech-sequelize));
+  border-color: hsl(var(--tech-sequelize));
+}
+
+.card.prisma {
+  color: hsl(var(--tech-prisma));
+  border-color: hsl(var(--tech-prisma));
+}
+
 .cardIcon {
   width: 100px;
   height: 100px;

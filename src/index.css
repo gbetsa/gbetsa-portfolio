@@ -65,6 +65,9 @@ All colors MUST be HSL.
     --tech-docker: 210 85% 60%;
     --tech-typescript: 211 60% 50%;
     --tech-git: 15 80% 50%;
+    --tech-next: 0 0% 90%;
+    --tech-sequelize: 60 70% 45%;
+    --tech-prisma: 280 60% 60%;
   }
 
   .dark {

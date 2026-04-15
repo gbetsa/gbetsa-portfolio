@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { GraduationCap, BookOpen, Award, ExternalLink, FileText } from "lucide-react";
+import { BrainCircuit, GraduationCap, BookOpen, Award, ExternalLink, FileText } from "lucide-react";
 import { motion } from "framer-motion";
 
 interface EducationEntry {
@@ -27,6 +27,15 @@ interface Certificate {
 }
 
 const educationData: EducationEntry[] = [
+
+    {
+        degree: "IA para Desenvolvedores",
+        institution: "SENAI/SC - SCTEC",
+        period: "Mar de 2026 – Presente",
+        description: "Formação técnica (180h) focada na aplicação de IA generativa no SDLC. Experiência com LLMs, engenharia de prompts e ferramentas como Copilot, Amazon Q e CodeWhisperer para geração e refatoração de código. Automação de testes (unitários, E2E e APIs) e documentação (Swagger). Desenvolvimento de agentes de IA com APIs, webhooks, n8n e Flowise, incluindo RAG e ChatOps. Aplicação de IA para qualidade de software: code review, geração de testes, detecção de anomalias e observabilidade em produção.",
+        skills: ["LLMs", "Prompt Engineering", "GitHub Copilot", "Amazon Q", "CodeWhisperer", "CI/CD", "Test Automation", "Postman", "Swagger", "RAG", "n8n", "AutoGPT", "Flowise", "MCP", "ChatOps", "APIs", "Webhooks", "QA com IA", "Observabilidade"],
+        icon: BrainCircuit,
+    },
     {
         degree: "FuturoDEV, Desenvolvedor Full Stack",
         institution: "SENAI/SC - Floripa Mais Tec",

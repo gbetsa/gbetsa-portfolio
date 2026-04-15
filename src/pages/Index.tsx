@@ -79,7 +79,7 @@ const Index = () => {
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
               <div className="text-center md:text-left">
                 <p className="text-muted-foreground">
-                  © 2025 Guilherme Betsa. Todos os direitos reservados.
+                  © 2026 Guilherme Betsa. Todos os direitos reservados.
                 </p>
               </div>
               <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
